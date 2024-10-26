@@ -1,0 +1,736 @@
+- Array
+
+fun main() {
+// Menggunakan arrayOf dengan huruf besar
+val names: Array<String> = arrayOf("Eko", "Kurniawan", "Budi")
+
+```
+// Mengganti elemen pertama array names
+names[0] = "Budi"
+println(names[0]) // Menggunakan println untuk baris baru
+
+// Menggunakan IntArray untuk array integer
+val nilai: IntArray = intArrayOf(10, 9, 8)
+
+// Mencetak nilai dari array nilai
+println(nilai[0])
+println(nilai[1])
+println(nilai[2])
+
+```
+
+}
+
+- kode array Nullble.
+
+fun main() {
+// Menggunakan arrayOf dengan huruf besar
+val names: Array<String> = arrayOf("Eko", "Kurniawan", "Budi")
+
+```
+// Mengganti elemen pertama array names
+names[0] = "Budi"
+println(names[0]) // Menggunakan println untuk baris baru
+
+// Menggunakan IntArray untuk array integer
+val nilai: IntArray = intArrayOf(10, 9, 8)
+
+// Mencetak nilai dari array nilai
+println(nilai[0])
+println(nilai[1])
+println(nilai[2])
+
+val members: Array<String?> = arrayOfNulls(5)
+members[0] = "Kurniawan"
+members[1] = "Kurniawan"
+members[2] = "Kurniawan"
+members[3] = "Kurniawan"
+members[4] = "Kurniawan"
+println(members[0])
+
+```
+
+}
+
+- Tipe data Range
+
+fun main(){
+
+```
+val range = 1..100
+
+println(range)
+
+```
+
+}
+
+- operasi Range.
+
+fun main(){
+
+```
+val range = 1..100
+
+println(range.count())
+println(range.contains(50))
+println(range.contains(200))
+println(range.first)
+println(range.last)
+println(range.step)
+
+```
+
+}
+
+Output:
+
+100
+true
+false
+1
+100
+1
+
+fun main(){
+
+//     val range = 1..100
+val range = 100 downTo 1 step 2
+
+```
+println(range.count())
+println(range.contains(50))
+println(range.contains(200))
+println(range.first)
+println(range.last)
+println(range.step)
+
+```
+
+}
+
+1. Operasi Matematika.
+- Contoh operasi Matematika,
+
+fun main(){
+var result = 10 / 3.0
+println(result)
+
+```
+var result2 = 10 + 10 / 2.0
+println(result2)
+
+```
+
+}
+
+- Augmented Assignments.
+
+fun main(){
+var result = 10 / 3.0
+println(result)
+
+```
+var result2 = 10 + 10 / 2.0
+println(result2)
+
+var total: Int = 0
+
+val barang1 = 100
+total += barang1
+
+val barang2 = 200
+total += barang2
+
+val barang3 = 300
+total += barang3
+
+println(total)
+
+```
+
+}
+
+- Unary Operator.
+- Contoh unary Operator
+
+fun main(){
+var result = 10 / 3.0
+println(result)
+
+```
+var result2 = 10 + 10 / 2.0
+println(result2)
+
+var total: Int = 0
+
+val barang1 = 100
+total += barang1
+
+val barang2 = 200
+total += barang2
+
+val barang3 = 300
+total += barang3
+
+println(total)
+
+total++ // total = total + 1
+total-- // total = total - 1
+
+println(total)
+
+```
+
+}
+
+fun main(){
+var result = 10 / 3.0
+println(result)
+
+```
+var result2 = 10 + 10 / 2.0
+println(result2)
+
+var total: Int = 0
+
+val barang1 = 100
+total += barang1
+
+val barang2 = 200
+total += barang2
+
+val barang3 = 300
+total += barang3
+
+println(total)
+
+total++ // total = total + 1
+total-- // total = total - 1
+
+println(total)
+
+val suhu = -5
+println(suhu)
+
+val sehat = true
+println(!sehat)
+
+```
+
+}
+
+- Operasi Boolean atau  Perbadingan.
+- Contoh Boolean.
+
+fun main(){
+val a = 100
+val b = 200
+
+```
+val result: Boolean = a > b
+println(result)
+println(100 <= 200)
+println(100 >= 200 )
+println("a" == "b" )
+println("a" != "b" )
+```
+
+}
+
+- Operasi Boolean Di Kotlin.
+- Contoh Operasi Boolean.
+- Operasi &&
+
+fun main(){
+val nilaUjian = 80
+val nilaiAbsen = 80
+val nilaiExtra = 80
+
+```
+val apakahLulusUjian = nilaUjian > 75
+val apakahLulusAbsen = nilaiAbsen > 75
+val apakahLulusExtra = nilaiExtra > 75
+
+val apakahLulus = apakahLulusUjian && apakahLulusAbsen && apakahLulusExtra
+println(apakahLulus)
+
+```
+
+}
+
+- Operasi ||
+- Operrasi !
+
+- If Expression.
+
+fun main() {
+val nilai = 90
+
+if (nilai > 75)
+println("Good Job")
+}
+
+- Else Expression.
+
+fun main() {
+val nilai = 90
+
+```
+if (nilai > 75) {
+    println("Good Job") // kalau true blok ini di esekusi
+} else {
+    println("Silakan coba lagi tahun depan!!") // kalau false blok ini di esekusi
+}
+
+```
+
+}
+
+- Else If Expression.
+
+https://www.youtube.com/watch?v=R15LROrkoiM&list=PL-CtdCApEFH_hja5vRJgQOXylCiQud7Qa&index=13
+
+1. Kode When Expression.
+
+fun main() {
+val nilai = 'A'
+
+```
+when (nilai) {
+    'A' -> {
+        println("Amazing")
+    }
+
+    'B' -> {
+        println("Good")
+    }
+
+    'C' -> {
+        println("Not Bad")
+    }
+
+    'D' -> {
+        println("Bad")
+    }
+
+    else -> {
+        println("Try Again Next Year")
+    }
+}
+
+```
+
+}
+
+- Kode : When Expression Multiple Option.
+
+fun main(){
+val nilai = "A"
+when(nilai){
+
+```
+    "A", "B", "C"-> {
+        println("Selamat Anda Lulus")
+    }
+    else -> {
+        println("Maaf, Anda Tidak Lulus!!")
+    }
+}
+
+```
+
+}
+
+- Kode : When Expression In.
+
+fun main(){
+val nilai = "D"
+val nilaiLulus : Array<String> = arrayOf("A", "B", "C")
+when (nilai){
+in nilaiLulus -> println("Selamat Anda lulus")
+!in nilaiLulus -> println("Maaf, Anda tidak Lulus!")
+}
+
+}
+
+- Kode : When Expression Is.
+
+fun main(){
+val name = "Kurniawan"
+when(name) {
+is String -> println("Name is String")
+!is String -> println("Name is not String")
+
+```
+}
+```
+
+}
+
+- When Sebagai Pengganti If Else.
+
+fun main(){
+val nilaiUjian = 90
+when {
+nilaiUjian > 90 -> println("Amazing")
+nilaiUjian > 80 -> println("Good Job")
+nilaiUjian > 70 -> println("Amazing")
+nilaiUjian > 60 -> println("Amazing")
+else -> println("Ngulang Tahun Depan!")
+
+```
+}
+
+```
+
+}
+
+1. For Loops.
+- Kode : For Loops.
+
+fun main(){
+
+```
+val names = arrayOf("Eko", "Kurniawan", "Khannedy")
+
+var total = 0
+for (name in names){
+   println(name)
+   total++
+}
+println("Total perulangan = $total")
+
+```
+
+}
+
+- 06.00
+- https://www.youtube.com/watch?v=8o80YbUN-t4&list=PL-CtdCApEFH_hja5vRJgQOXylCiQud7Qa&index=15
+
+- Kode : For Array.
+
+fun main() {
+for (i in 0..100) {
+println(i)
+}
+}
+
+- contoh 2.
+
+fun main() {
+for (i in 100 downTo 0 step 2) {
+println(i)
+}
+}
+
+1. While Loops.
+- Kode : While Loops.
+
+fun main() {
+var i = 0
+
+```
+while(i < 10){
+    println("Perulangan $i")
+    i++
+}
+
+println("Selesai Perulangan")
+
+```
+
+}
+
+1. Do While Loops.
+- Kode : Do While Loops.
+
+fun main() {
+var i = 0
+
+```
+do {
+    println("Perulangan ke $i")
+    i++
+} while (i < 100)  // Perbaiki kondisi di sini
+
+```
+
+}
+
+1. Break & Continue.
+- Kode : Break & Cotinue.
+
+fun main(){
+var i = 0
+while (true){
+println("Break Me $i")
+i++
+
+```
+    if(i > 100){
+        break
+
+    }
+}
+
+```
+
+}
+
+- Contoh ke 2
+
+fun main(){
+var i = 0
+while (true){
+println("Break Me $i")
+i++
+
+```
+    if(i > 100){
+        break
+
+    }
+}
+for (i in 1..100){
+    if (i % 2 == 0){
+
+    }
+    println("Angka ke $i")
+}
+
+```
+
+}
+
+1. Function.
+- Kode Function.
+
+fun helloWorld(){
+println("Hello World ")
+println("Hy Im Mobille Devlover ")
+
+}
+
+fun main(){
+helloWorld() // kalau memanggil function sebanyak 2 kali akan dieksekusi  sebanyak 2kali
+}
+
+1. Function Parameter.
+- Kode Function Parameter.
+
+fun sayHello(firstName: String, lastName: String?) {
+if (lastName == null) {
+println("Hello $firstName")
+} else {
+println("Hello $firstName $lastName")
+}
+}
+
+fun main() {
+sayHello("Eko", "Kurniawan")
+sayHello("Kurniawan", null)
+sayHello("Joko", "Nugraha")
+}
+
+1. Function Default Argument.
+- Kode : Function Default Argument.
+
+fun hello(firsName: String, lastName: String? = null){
+if (lastName == null){
+println("Hello $firsName")
+} else {
+println("Hello $firsName $lastName")
+}
+
+}
+
+fun main(){
+hello("Eko")
+hello("Kurniawan", "Effendi")
+
+hello("Eko")
+
+}
+
+1. Function Named Argument.
+- Kode : Function Named Argument.
+
+fun fullName(firsName: String,
+middleName: String,
+lastName: String)
+{
+println("Hello $firsName $middleName $lastName")
+
+}
+
+fun main(){
+fullName("Eko", "Kurniawan", "Effendi")
+fullName(
+lastName = "Effendi",
+firsName = "Eko",
+middleName = "Kurniawan"
+)
+
+}
+
+1. Unit Returning Function.
+- Kode : Unit Returning Function.
+
+fun printHello(): Unit{
+println("hello")
+}
+
+fun main(){
+println()
+}
+
+1. Function Return Type.
+- Kode : Function Retuurn Type.
+
+fun jumlahkan(a:Int, b:Int): Int{
+val total = a + b
+return total
+}
+
+fun bagi(a: Int, b: Int):Int{
+if(b == 0){
+return 0
+}else{
+
+```
+val result = a/b
+return(result)
+
+}
+
+```
+
+}
+
+fun main(){
+println(jumlahkan(10, 10))
+println(jumlahkan(100, 10))
+println(jumlahkan(1000, 10))
+
+```
+val result = jumlahkan(200, 10)
+println(result)
+
+println(bagi(100, 10))
+println(bagi(100, 0))
+
+```
+
+}
+
+1. Single Expression Function.
+- Kode : Single Expression Function.
+
+fun kaliDua(a:Int): Int = a * 2
+
+fun sapa(name: String): Unit = println("Hello $name")
+
+fun main(){
+println(kaliDua(10))
+sapa("Kurniawan")
+}
+
+1. Function Varargs Parameter.
+- Kode : Function Varargs Parameter.
+
+fun hitungTotal(values: Array<Int>): Int{
+var total = 0
+
+```
+for (value in values){
+    total += value
+}
+return total;
+
+```
+
+}
+
+fun main(){
+val values = arrayOf(10, 10, 10, 10)
+val result = hitungTotal(values)
+
+```
+println(result)
+
+```
+
+}
+
+- Contoh 2.
+
+fun hitungTotal(vararg values: Int): Int{
+var total = 0
+
+```
+for (value in values){
+    total += value
+}
+return total;
+
+```
+
+}
+
+fun main(){
+//val values = arrayOf(10, 10, 10, 10)
+val result = hitungTotal(10, 10, 10, 10)
+
+```
+println(result)
+
+```
+
+}
+
+1. Extension Function.
+- Kode : Extension Function.
+
+fun String.hello(): String = "Hello $this"
+
+fun String.printHello(): Unit = println("hello $this")
+
+fun main(){
+val name = "Kurniawan"
+
+```
+println(name.hello())
+name.printHello()
+
+"Kurniawan Effendi".printHello()
+
+```
+
+}
+
+1. Functiion Infix Natation.
+- Kode Function Infix Natation.
+
+infix fun [String.to](http://string.to/)(type: String): String {
+if (type == "UP"){
+return this.toUpperCase()
+
+```
+}else {
+    return this.toUpperCase()
+}
+
+```
+
+}
+
+fun main(){
+val result = "Kurniawan Effendi" to "UP"
+println(result)
+
+//     100 downTo 1
+
+}
+
+1. Func

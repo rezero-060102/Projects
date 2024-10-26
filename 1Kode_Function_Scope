@@ -1,0 +1,148 @@
+belajar kotlin hari ke 7.
+
+29. function.
+https://www.youtube.com/watch?v=5PXVYQBmOeo&list=PL-CtdCApEFH_hja5vRJgQOXylCiQud7Qa&index=29
+
+kode : Function Scope.
+
+// Function Scope, harus belajar kostisten semangat.
+
+// fun contohHello(){
+    
+// }
+
+// fun satu(){
+// 	contohHello	    
+// }
+
+// fun dua(){
+    
+// }
+
+fun main(){
+   fun contohHelloWorld(){
+       println("Hello World")
+   }
+    
+	contohHelloWorld()
+    
+    
+}
+
+
+30.Return If & When.
+(https://www.youtube.com/watch?v=H4LBHnZDm50&list=PL-CtdCApEFH_hja5vRJgQOXylCiQud7Qa&index=30)
+
+Contoh kode return If & When.
+
+// Return If & When.
+
+fun main(){
+     
+   fun sayHello(name: String = ""): String {
+       if (name == ""){
+           return "Hello Bro!"
+       }else {
+           return "Hello $name"
+       }
+   }
+   
+   println(sayHello())
+   println(sayHello("Kurniawan"))
+   
+}
+
+// Contoh 2
+
+// Return If & When.
+
+fun main(){
+     
+   fun sayHello(name: String = ""): String {
+      return if (name == ""){ // menghapus di return cuman satu return
+            "Hello Bro!"
+       }else {
+            "Hello $name"
+       }
+   }
+   
+   println(sayHello())
+   println(sayHello("Kurniawan"))
+   
+}
+
+// When.
+
+// Return If & When.
+
+fun main() {
+    fun sayHello(name: String = ""): String {
+        return when (name) {
+            "" -> "Hello Bro!"
+            else -> "Hello $name"
+        }
+    }
+
+    // Contoh penggunaan
+    println(sayHello()) // Output: Hello Bro!
+    println(sayHello("Alice")) // Output: Hello Alice
+}
+
+31. Recursive Function.
+Contoh kode recursive fuction.
+
+Solutions
+Docs
+Community
+Teach
+Play
+
+2.0.21
+JVM
+Program arguments
+Copy link
+Share code
+Run
+fun factorialLoop(value: Int): Int {
+    var result = 1;
+    for (i in value downTo 1){
+    result *= i
+}
+	return result
+}
+// Kode : factorial menggunakan For Loop.package
+​
+fun factorialLoop(value: Int): Int {
+    // Pastikan nilai tidak negatif
+    if (value < 0) throw IllegalArgumentException("Nilai tidak boleh negatif")
+    
+    var result = 1
+    for (i in value downTo 1) {
+        result *= i
+    }
+    return result
+}
+​
+fun main() {
+    // Contoh penggunaan
+    println(factorialLoop(5)) // Output: 120
+    println(factorialLoop(0)) // Output: 1
+}
+​
+120
+1
+
+// kode ini menggunakan recursive dan lebih evesion dalam penggunaan nya.
+
+fun factorialRecursive(value: Int): Int {
+    return when (value){
+        1 -> 1
+        else -> value * factorialRecursive(value - 1)
+    }    
+}
+
+fun main(){
+    println(factorialRecursive(10))
+}
+
+32.Tail Recursive Function.

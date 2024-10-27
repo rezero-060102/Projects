@@ -146,3 +146,16 @@ fun main(){
 }
 
 32.Tail Recursive Function.
+- Kode Tail Recursive Fanction.
+// Tail Recursive Function.
+// https://docs.google.com/presentation/d/14E169Dpd1q8R7EKxevYitZM8nBoAh5u4HfVJ8YKR1UU/edit?pli=1#slide=id.g72319bb380_0_158
+
+fun main(){
+    tailrec fun display(value: Int){
+    println(value)
+    if (value > 0){
+        display( value - 1)
+    }
+}
+	display(10)
+}

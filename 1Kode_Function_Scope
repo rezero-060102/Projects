@@ -159,3 +159,171 @@ fun main(){
 }
 	display(10)
 }
+
+// contoh 2
+fun main(){
+    
+    fun display(value: Int){
+        println("Rexursive $value")
+    if (value > 0){
+        display(value - 1)
+    }
+    
+}
+    display(10)
+}
+
+// contoh 3
+fun main(){
+    
+    // tailrec fungsi ini merubah menjadi perulangan biasa.
+    tailrec fun display(value: Int){
+        println("Rexursive $value")
+    if (value > 0){
+        display(value - 1)
+    }
+    
+}
+    display(1000)
+}
+
+
+// Kode : Taill Recursive Factorial Function.
+// Contoh 1
+fun main(){
+    
+
+    fun factorialRecursiive(value: Int): Int{
+        return when (value) {
+            1 -> 1
+            else -> value * factorialRecursiive(value - 1)
+        }
+    }
+    
+    println(factorialRecursiive(100)) 
+ // Kenapa hasil nya 0 karena terkenah integer overflow.   
+}
+
+// Contoh 2
+fun main(){
+    
+// Di Kotlin, long adalah tipe data yang digunakan untuk menyimpan angka bulat (integer) dengan ukuran yang lebih besar dibandingkan dengan tipe data int. Tipe data long memiliki rentang nilai dari -9,223,372,036,854,775,808 hingga 9,223,372,036,854,775,807, yang membuatnya sangat berguna dalam situasi di mana nilai yang sangat besar atau sangat kecil diperlukan.
+    fun factorialRecursiive(value: Long): Long{
+        return when (value) {
+            1L -> 1L
+            else -> value * factorialRecursiive(value - 1)
+        }
+    }
+    
+    println(factorialRecursiive(10)) 
+   
+}
+
+
+// 33. Lambda Expression di variable.
+
+fun main(){
+   
+    // membuat lambda expression.
+    val contohLambda: (String, String )-> String = { firsName:String, lastName ->
+        val result = "$firsName $lastName"
+        result
+    }
+    val result = contohLambda("Kurniawan", "Effendi")
+    println(result)
+    
+}
+
+
+// Lambda Expression di variable.
+// membuat kode : It
+
+fun main(){
+   
+    // membuat kode : It Ingat kalau int bisa jalan kalau parameter String cuman 1..
+ 	   val sayHello: (String) -> String = {
+           "Hello $it"
+       }
+    
+    println(sayHello("Kurniawan"))
+}
+
+
+// Lambda Expression di variable.
+// membuat kode : Method Reference.
+
+fun toUpper(value: String): String = value.toUpperCase()
+    
+
+fun main(){
+  val toUpperCase : (String) -> String = ::toUpper
+    println(toUpperCase("Kurniawan Effendi"))
+    
+}
+
+
+// 34. Belajar membuat Higher-Order Function.
+// membuat kode : Higher-Order Function.
+
+fun main(){
+    
+    fun hello(name: String, transfomer: (String) -> String ): String {
+        val nameTransfomer = transfomer(name)
+        return "Hello $nameTransfomer"
+    }
+    val lambdaUpper = { value: String -> value.toUpperCase()}
+    
+    // metode biasa nya
+    println(hello("Kurniawan", lambdaUpper))
+    
+    // metode lain Outpu nya
+    println(hello("Kurniawan", { value: String -> value.toUpperCase()} ))
+    
+}
+
+
+
+// membuat kode : Trailing Lambda.
+
+fun main(){
+    
+    fun hello(name: String, transfomer: (String) -> String ): String {
+        val nameTransfomer = transfomer(name)
+        return "Hello $nameTransfomer"
+    }
+    val lambdaUpper = { value: String -> value.toUpperCase()}
+    
+    // metode biasa nya
+    println(hello("Kurniawan", lambdaUpper))
+    
+    // metode lain Outpu nya
+    println(hello("Kurniawan", { value: String -> value.toUpperCase()} ))
+    
+   // membuat kode : Trailing Lambda. 
+    val result = hello("Kurniawan") { value: String ->
+    	value.toLowerCase()
+    }
+}
+
+
+// 35. Belajar membuat Anonymous Function.
+// membuat kode : Anonymous Function.
+
+fun main() {
+
+    fun hello(name: String, transformer: (String) -> String): String { // Mengubah Unit menjadi String
+        val nameTransformed = transformer(name) // Memperbaiki nama variabel
+        return "Hello $nameTransformed" // Mengembalikan string
+    }
+
+    val upper = fun(value: String): String {
+        return if (value.isEmpty()) { // Memperbaiki pemeriksaan untuk string kosong
+            "Ups"
+        } else {
+            value.toUpperCase()
+        }
+    }
+
+    println(hello("Kurniawan", upper))
+    println(hello("", upper))
+}

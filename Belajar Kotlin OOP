@@ -316,3 +316,31 @@ fun main(){
     println(avanza.year)  // 2019
     
 }
+
+// contoh 2.
+class Address {
+    var street: String = ""
+    var city: String = "Bengkulu"
+    var country: String = "Indonesia"
+
+    // Constructor dengan dua parameter
+    constructor(parameter: String, paramCity: String) {
+        this.street = parameter
+        this.city = paramCity
+    }
+
+    // Constructor dengan tiga parameter
+    constructor(paraStreet: String, paramCity: String, paramCountry: String) {
+        this.street = paraStreet
+        this.city = paramCity
+        this.country = paramCountry
+    }
+}
+
+fun main() {
+    val myAddress = Address("Jalan Merdeka", "Bengkulu", "Indonesia")
+    println(myAddress.street) // Output: Jalan Merdeka
+    println(myAddress.city)   // Output: Bengkulu
+    println(myAddress.country) // Output: Indonesia
+}
+

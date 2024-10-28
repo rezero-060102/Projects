@@ -363,7 +363,7 @@ fun main() {
 
 }
 
-// 36. Belajar membuat Inline Function.
+// 37. Belajar membuat Inline Function.
 // membuat kode : Inline Function.
 
 // melihat Bytecode Kotlin. https://www.youtube.com/watch?v=b2U98ecql0s&list=PL-CtdCApEFH_hja5vRJgQOXylCiQud7Qa&index=37
@@ -406,7 +406,7 @@ fun main(){
 }
 
 
-// 36. Belajar membuat label.
+// 38. Belajar membuat label.
 // membuat kode : label.
 
 // menampilkan perkalian 1 sampai 10.
@@ -470,3 +470,16 @@ fun main() {
     println(result)
 }
 
+// 39. Belajar membuat Package & Import.
+// membuat kode : Package & Import.
+
+// New package. -> com.company.belajar.util simmpan didalam pakgake
+
+// package com.company.belajar.util
+fun sayHello(name: String){
+    println("Hello $name")
+}
+
+fun sayGoodBye(name: String){
+    println("GoodBye $name")
+}

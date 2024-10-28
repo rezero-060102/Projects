@@ -182,3 +182,28 @@ fun main() {
     println(alamz.year)
 }
 
+
+// 6. Kotlin OOP: Initialzer Block.
+// Eko Kurniawan Khannedy
+// https://docs.google.com/presentation/d/1aeQWBgd1XE7IRvgC-fkcs6ReL5H2qX5tAi4r66dusok/edit.
+
+
+// Apa itu Initialzer Block?
+// Initializer Block adalah blok kode yang akan dieksekusi ketika constructor dipanggil
+// Kita bisa memasukkan kode program di dalam initializer block
+
+
+
+// Membuat kode : Initialzer Block.
+// package data
+
+class Car(paramBrand: String, paramYear: Int = 2020) {
+    var brand: String
+    var year: Int
+
+    init {
+        brand = paramBrand
+        year = paramYear
+        println("Car $brand, Year: $year")
+    }
+}

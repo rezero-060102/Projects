@@ -1,0 +1,88 @@
+// Materi Selanjutnya.
+/** Kotlin Object Oriented Programming.
+ *  Kotlin Generic
+ * kotlin Collection
+ * Kotlin Coroutine
+*/ 
+
+
+// 1.Kotlin OOP: Belajar kotlin Objek Oriented Programming.
+// Eko Kurniawan Khannedy
+// https://docs.google.com/presentation/d/1aeQWBgd1XE7IRvgC-fkcs6ReL5H2qX5tAi4r66dusok/edit.
+
+// lanjutan kotlin dasar.
+// Apa itu Object Oriented Programming?
+/** 
+ * Object Oriented Programming adalah sudut pandang bahasa pemrograman yang berkonsep “objek”
+ * Ada banyak sudut pandang bahasa pemrograman, namun OOP adalah yang sangat populer saat ini.
+ * Ada beberapa istilah yang perlu dimengerti dalam OOP, yaitu: Object dan Class
+ * */
+
+// Apa itu Object?
+/** 
+ * Object adalah data yang berisi properties (fields atau attributes) dan functions (methods atau behavior)
+ * Semua data di Kotlin adalah object, dari mulai Number, Boolean, Character, String dan yang lainnya
+ * */
+
+// Apa itu Class?
+/** 
+ * Class adalah blueprint, prototype atau cetakan untuk membuat Object
+ * Class berisikan deklarasi semua properties dan functions yang dimiliki oleh Object
+ * Setiap Object selalu dibuat dari Class
+ * Dan sebuah Class bisa membuat Object tanpa batas
+*/
+
+
+// 2.Kotlin OOP: Class .
+// Eko Kurniawan Khannedy
+// https://docs.google.com/presentation/d/1aeQWBgd1XE7IRvgC-fkcs6ReL5H2qX5tAi4r66dusok/edit.
+
+// Membuat Class
+// Untuk membuat class di Kotlin, kita bisa menggunakan kata kunci class
+// Membuat class di Kotlin tidak ada aturan harus sama dengan nama file seperti di Java
+// Namun agar kodenya rapih dan mudah untuk dimengerti, disarankan untuk membuat nama class dan nama file sama. Misal class Person di file Person.kt
+
+// pilih langsung class di pakkage nya dan nama file sama dengan class
+// package belajar.oop
+
+// kode Class
+class Person
+
+class Car
+
+class Addres
+
+
+
+// 3.Kotlin OOP: Object .
+// Eko Kurniawan Khannedy
+// https://docs.google.com/presentation/d/1aeQWBgd1XE7IRvgC-fkcs6ReL5H2qX5tAi4r66dusok/edit.
+
+// Membuat Object.
+// Membuat Object di Kotlin sangat mudah, mirip seperti memanggil function, dengan menggunakan nama class
+// Di Kotlin, tidak butuh kata kunci khusus untuk membuat Object, misal jika di Java kita butuh menggunakan kata kunci new untuk membuat Object
+
+// Kode : Object.
+
+// package belajar.App
+
+class Person
+
+fun main(){
+    val eko = Person()
+    val asep = Person()
+    val kawai = Person()
+    
+    println(eko)
+    println(asep)
+    println(kawai)
+    
+}
+// Output nya.
+// Person@3941a79c
+// Person@b1bc7ed
+// Person@7cd84586
+
+
+
+

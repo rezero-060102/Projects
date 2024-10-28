@@ -483,3 +483,70 @@ fun sayHello(name: String){
 fun sayGoodBye(name: String){
     println("GoodBye $name")
 }
+
+
+// membuat kode : Import.
+
+
+// package com.company.belajar.util
+import com.company.belajar.util.sayHello
+
+fun main() {
+    sayHello("Kurniawan")
+}
+
+// membuat kode : Import.
+
+
+// package com.company.belajar.util
+import com.company.belajar.util.* // ccara ke 2
+
+fun main() {
+    sayHello("Kurniawan")
+    
+    // com.company.belajar.util.sayGoodBye("Kurniawan") cara ke 1
+}
+
+// 40. Belajar membuat Main Parameter.
+// membuat kode : Main Parameter.
+
+// cara cepat tekan maina itu adalah main argumen
+// tekan Edit Comfigurations -> lalu isi data dengan nama anda ada apa aja -> tekan oke
+fun main(args: Array<String>) {
+    for (value in args) {
+        println(value)
+    }
+    
+}
+
+
+// 41. Belajar membuat Komentar.
+// membuat kode : Komentar.
+
+// komentar terbaik ialah kode itu sendiri
+// saat  membuat kode, kita perluh membuat kode semudah mungkin untuk dibaca
+// Namun kadang juga kita butuh menambahkan komentar di kode kotlin.package
+
+// ini 1 baris
+
+/**  ini banyak baris 
+ * pp
+ * pp
+ * */
+
+fun contohFunction(){
+    
+}
+
+fun contohFunctionParameter(){
+    
+}
+
+fun main(){
+    // memanggil contoh function.
+    contohFunction()
+    contohFunctionParameter() // memanggil contoh function parameter
+}
+
+
+

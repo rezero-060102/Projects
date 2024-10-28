@@ -84,5 +84,101 @@ fun main(){
 // Person@7cd84586
 
 
+// 4.Kotlin OOP: Propertis .
+// Eko Kurniawan Khannedy
+// https://docs.google.com/presentation/d/1aeQWBgd1XE7IRvgC-fkcs6ReL5H2qX5tAi4r66dusok/edit.
 
+
+// Apa itu Properties?
+// Properties / Fields / Attributes adalah data yang bisa kita sisipkan di dalam Object
+// Namun sebelum kita bisa memasukkan data di Properties, kita harus mendeklarasikan data apa aja yang dimiliki object tersebut di dalam deklarasi class-nya
+// Membuat Properties sama seperti membuat variable, bisa mutable atau immutable
+
+
+// Membuat kode : properties.
+
+// package data
+class Person {
+    var firsName: String = " "
+    var middleName: String? = null
+    var lastName: String = " "
+    
+}
+
+// package data
+class Car {
+    var brand: String = " "
+    var year: Int = 2020
+    
+}
+
+
+// package data
+class Address {
+    var sttreet: String = " "
+    var city: String ="Yogyakarta"
+    var country: String ="Indonesia"
+    
+    
+}
+
+
+// Apa itu Manipulasi Properties?
+// Properties yang ada di object, bisa kita manipulasi. Tergantung mutable atau immutable.
+// Jika mutable, berarti kita bisa mengubah data properties nya, namun jika immutable, kita hanya bisa mengambil data properties nya saja
+// Untuk memanipulasi data properties, sama seperti cara pada variable
+// Untuk mengakses properties, kita butuh kata kunci . (titik) setelah nama object dan diikuti nama properties nya
+
+
+// Membuat kode : Manipulasi Properties.
+class Person{
+    var firsName: String = ""
+}
+
+fun main(){
+    val eko = Person()
+    eko.firsName = "Eko"
+    
+    val joko = Person()
+    joko.firsName = "joko"
+    
+    val budi = Person()
+    budi.firsName = "budi"
+    
+    println(eko.firsName)
+    println(joko.firsName)
+    println(budi.firsName)
+    
+    
+}
+
+
+// 5.Kotlin OOP: Constuctor .
+// Eko Kurniawan Khannedy
+// https://docs.google.com/presentation/d/1aeQWBgd1XE7IRvgC-fkcs6ReL5H2qX5tAi4r66dusok/edit.
+
+
+// Apa itu Constuctor?
+// Saat kita membuat Object, maka kita seperti memanggil sebuah function
+// Di dalam class Kotlin, kita bisa membuat Constructors, Constructors mirip seperti function yang akan dipanggil saat pertama kali Object dibuat.
+// Mirip seperti di Function, kita bisa memberi parameter pada Constructors
+
+
+// Membuat kode : Constuctor.
+// package data
+
+class Car(paramBrand: String, paramYear: Int = 2020) {
+    var brand: String = paramBrand
+    var year: Int = paramYear
+}
+
+fun main() {
+    val avanza = Car("Toyota")
+    val alamz = Car("Wuling", 2019)
+    
+    println(avanza.brand)
+    println(avanza.year)
+    println(alamz.brand)
+    println(alamz.year)
+}
 

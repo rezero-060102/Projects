@@ -207,3 +207,65 @@ class Car(paramBrand: String, paramYear: Int = 2020) {
         println("Car $brand, Year: $year")
     }
 }
+
+
+// 7. Kotlin OOP: Secondary Constructor.
+// Eko Kurniawan Khannedy
+// https://docs.google.com/presentation/d/1aeQWBgd1XE7IRvgC-fkcs6ReL5H2qX5tAi4r66dusok/edit.
+
+
+// Apa itu Secondary Constructor?
+// Kotlin mendukung pembuatan constructor lebih dari satu
+// Constructor yang utama yang terdapat di Class, disebut primary constructor, constructor tambahan yang bisa kita buat lagi adalah secondary constructor
+// Saat membuat constructor, kita wajib memanggil primary constructor jika ada primary constructor
+
+
+
+// Membuat kode : Secondary Constructor.
+// package data
+
+
+class Car(val brand: String) {
+    var year: Int
+
+    // Primary constructor
+    init {
+        year = 2020 // Default year
+    }
+
+    // Secondary constructor
+    constructor(brand: String, year: Int) : this(brand) {
+        this.year = year
+    }
+}
+
+fun main() {
+    val car1 = Car("Toyota") // Menggunakan primary constructor
+    println("Car: ${car1.brand}, Year: ${car1.year}")
+
+    val car2 = Car("Honda", 2022) // Menggunakan secondary constructor
+    println("Car: ${car2.brand}, Year: ${car2.year}")
+}
+
+
+// 2.  Membuat kode : Secondary Constructor.
+// package data
+class car(val brand: String, var year: Int = 2020){
+   // constorctor utama. 
+}
+
+fun main(){
+    val avanza = car("toyota") // Menggunakan pprimary constuctor
+    avanza.year = 2015 // Mengubah Tahun.
+    
+    val almaz = car ("wuling", 2019) // Menggunakan primary constructor dengan dua parameter
+
+    
+    
+    println(avanza.brand) // Output: Toyota
+    println(avanza.year)  // Output: 2015
+    println(almaz.brand)   // Output: Wuling
+    println(almaz.year)    // Output: 2019
+    
+}
+

@@ -327,3 +327,146 @@ fun main() {
     println(hello("Kurniawan", upper))
     println(hello("", upper))
 }
+
+// 36. Belajar membuat Closure.
+// membuat kode : Closure.
+// catatan berhati -hati dalam menggunakan closure kalau salah berakibatkan bisa mengubah data orang lain. 
+
+fun main() {
+    var counter: Int = 0
+
+    // Memperbaiki nama lambda
+    val lambdaIncrement = {
+        println("Lambda Increment")
+        counter++
+    }
+
+    // Menentukan tipe kembalian untuk fungsi anonim
+    val anonymousIncrement: () -> Unit = {
+        println("Fungsi Anonim Increment")
+        counter++
+    }
+
+    // Menambahkan tipe kembalian untuk fungsi biasa
+    fun functionIncrement() {
+        println("Fungsi Increment")
+        counter++
+    }
+
+    // Memanggil semua increment
+    lambdaIncrement()
+    anonymousIncrement()
+    functionIncrement()
+
+    // Menampilkan nilai counter akhir
+    println(counter)
+
+}
+
+// 36. Belajar membuat Inline Function.
+// membuat kode : Inline Function.
+
+// melihat Bytecode Kotlin. https://www.youtube.com/watch?v=b2U98ecql0s&list=PL-CtdCApEFH_hja5vRJgQOXylCiQud7Qa&index=37
+inline fun hello(name: () -> String): String {
+    return "Hello ${name()}"
+}
+
+fun main(){
+    println(hello{"Kurniawan"})
+    println(hello{"Effendi"})
+    
+}
+
+// membuat kode : Noinline.
+
+inline fun hello(firsName: () -> String, 
+		lastName:() -> String 
+                ): String{
+    return "Hello ${firsName()} ${firsName()}"
+}
+
+fun main(){
+    for (i in 0..100)
+    println(hello({"Effendi"}, {"Kurniawan"}))
+    
+}
+
+// membuat kode : Noinline.
+
+inline fun hello(firsName: () -> String, 
+		noinline lastName:() -> String 
+                ): String{
+    return "Hello ${firsName()} ${firsName()}"
+}
+
+fun main(){
+    for (i in 0..100)
+    println(hello({"Effendi"}, {"Kurniawan"}))
+    
+}
+
+
+// 36. Belajar membuat label.
+// membuat kode : label.
+
+// menampilkan perkalian 1 sampai 10.
+fun main(){
+    
+    for(i in 1..10){
+        for (j in 1..10){
+            println("$i * $j = ${i * j}")
+        }
+    }
+}
+
+// membuat kode : Break to label.
+
+// menampilkan perkalian 1 sampai 10.
+fun main(){
+    
+    loopi@ for(i in 1..10){
+        loopj@ for (j in 1..10){
+            println("$i * $j = ${i * j}")
+            
+            if(i > 5){
+                break@loopi
+            }
+        }
+    }
+}
+
+// 36. Belajar membuat label.
+// membuat kode : Continue to label.
+
+// menampilkan perkalian 1 sampai 4.
+fun main(){
+    
+    loopi@ for(i in 1..10){
+        loopj@ for (j in 1..10){
+            if(j == 5){
+            	continue@loopi
+        }
+            println("$i * $j = ${i * j}")
+              
+                
+        }
+    }
+}
+
+// membuat kode : Return to label.
+
+// menampilkan perkalian 1 sampai 4.
+fun main() {
+    // Fungsi test menerima nama dan operasi yang menghasilkan String
+    fun test(name: String, operation: (String) -> String): String = operation(name)
+
+    // Memanggil fungsi test dengan lambda yang mengembalikan String
+    val result = test("Kurniawan") { name ->
+        println("Eko $name")  // Mencetak nama
+        "Hasil dari $name"    // Mengembalikan String
+    }
+
+    // Menampilkan hasil
+    println(result)
+}
+

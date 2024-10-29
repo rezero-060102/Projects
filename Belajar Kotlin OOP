@@ -424,4 +424,38 @@ fun main() {
     println("Full name: ${person.getFullName()}")
 }
 
+// 10. Kotlin OOP: Function Overloading.
+// Eko Kurniawan Khannedy
+// https://docs.google.com/presentation/d/1aeQWBgd1XE7IRvgC-fkcs6ReL5H2qX5tAi4r66dusok/edit.
 
+
+// Apa itu Function Overloading?
+// Function Overloading adalah kemampuan membuat function dengan nama yang sama di dalam class
+// Untuk membuat function dengan nama yang sama, kita wajib menggunakan parameter yang berbeda, bisa tipe parameter yang berbeda, atau jumlah parameter yang berbeda
+
+
+// Membuat kode : Properties di Constructor.
+// package data
+
+class Person {
+    var firsName: String = ""
+    var middleName: String? = null
+    var lastName: String = ""
+    
+    
+    fun sayHello(name: String){
+        println("Hello $name, My Name is $firsName")
+    }
+    
+    fun sayHello(firsNameParam: String) {
+        println("Hello $name, My name is $firsName")
+    }
+    
+    fun run(){
+        println("I'm run")
+    }
+    
+    fun getFullName(): String {
+        return "firstName $middleName $lastName"
+    }
+}
